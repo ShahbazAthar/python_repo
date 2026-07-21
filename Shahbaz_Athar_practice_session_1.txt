@@ -1,0 +1,303 @@
+Operators are used to perform operations on variables and values.
+
+Types-------------
+1- Arithmetic Operators
+2- Identity Operators
+3- Relational(Comparison) Operators
+4- Bitwise Operators
+5- Logical Operators
+6- Assignment Operators
+7- Membership Operators
+
+1- Arithmetic Operators- Arithmetic operators are used to perform mathematical operations on numeric values.
+
+Operators:
++   Addition
+-   Subtraction
+*   Multiplication
+/   Division
+//  Floor Division
+%   Modulus
+**  Exponentations
+
+example:
+
+a = 4
+b = 7
+
+print(a + b)
+print(a - b)
+print(a / b)
+print(a // b)
+print(a * b)
+print(a ** b)
+print(a % b)
+
+
+2- Identity Operators: Identity operators are used to check whether two variables refer to the same object in memory.
+
+Operators:
+is
+is not
+
+Example:
+
+
+a = 1
+b = 2
+c = 8
+
+print(a is c)
+print(a is b)
+print(c is not b)
+print(a is not c)
+
+
+3- Relational (Comparison) Operators: Relational operators are used to compare two values. Output is always either True or False.
+
+Operators:
+==   Equal To
+!=   Not Equal To
+>    Greater Than
+<    Less Than
+>=   Greater Than or Equal To
+<=   Less Than or Equal To
+
+Example:
+
+
+a = 4
+b = 7
+
+print(a == b)
+print(a != b)
+print(a > b)
+print(a < b)
+print(a >= b)
+print(a <= b)
+
+
+
+4- Bitwise Operators: Bitwise operators perform operations on the binary representation of integers.
+
+Operators:
+&   AND
+|   OR
+^   XOR
+~   NOT
+<<  Left Shift
+>>  Right Shift
+
+Example:
+
+
+a = 1
+b = 9
+
+print(a & b)
+print(a ^ b)
+print(a | b)
+print(a << 1)
+print(a >> 1)
+print(~a)
+
+
+5- Logical Operators: Logical operators are used to combine two or more conditions.
+
+Operators:
+and
+or
+not
+
+Example:
+
+
+a = 4
+b = 7
+
+print(a < b and b > 5)
+print(a > b or b > 5)
+print(not(a < b))
+
+
+6- Assignment Operators: Assignment operators are used to assign or update the value of a variable.
+
+Operators:
+=    Assignment
++=   Add and Assign
+-=   Subtract and Assign
+*=   Multiply and Assign
+/=   Divide and Assign
+//=  Floor Divide and Assign
+%=   Modulus and Assign
+**=  Exponent and Assign
+
+Example:
+
+a = 4
+
+a += 5
+print(a)
+
+a -= 1
+print(a)
+
+a *= 3
+print(a)
+
+a /= 7
+print(a)
+
+a //= 2
+print(a)
+
+a %= 3
+print(a)
+
+a **= 2
+print(a)
+
+
+
+7- Membership Operators: Membership operators are used to check whether a value is present in a sequence such as a string, list or tuple.
+
+Operators:
+in
+not in
+
+Example:
+
+
+name = "Amar"
+
+print("m" in name)
+print("i" in name)
+print("r" in name)
+print("a" not in name)
+
+
+---------------------------------------------------------------
+CONTROL STATEMENTS
+
+Control statements are used to control the flow of execution of a program.
+
+Types:
+1. Decision Making Statements
+2. Looping Statements
+3. Jump Statements
+
+1- Decision Making Statements: Decision making statements are used to execute different blocks of code based on a condition.
+
+Types:
+1. if Statement
+2. if else Statement
+3. if elif else Statement
+
+Example:
+
+temperature = 44
+
+if temperature > 41:
+    print("hot day")
+
+
+
+if-else Statement: The if-else statement executes one block if the condition is True and another block if the condition is False.
+
+Example:
+
+password = "Shahbaz@123"
+
+if password == "Shahbaz@123":
+    print("Login Successful")
+else:
+    print("Wrong Password")
+
+
+
+if elif else Statement: The if elif else statement is used when there are multiple conditions to check.
+
+Example:
+
+amount = 1500
+
+if amount >= 5000:
+    print("Premium Customer")
+elif amount >= 1000:
+    print("Gold Customer")
+else:
+    print("Regular Customer")
+
+
+
+2- Looping Statements: Looping statements are used to execute the same block of code multiple times.
+
+Types:
+1. for Loop
+2. while Loop
+
+for Loop: The for loop is used to iterate over a sequence.
+
+Example:
+
+fruits = ["Apple", "Mango", "Guava", "Banana"]
+
+for fruit in fruits:
+    print(fruit)
+
+
+
+while Loop: The while loop runs until the given condition becomes False.
+
+Example:
+
+i = 1
+
+while i <= 3:
+    print("Count =", i)
+    i += 1
+
+
+3- Jump Statements: Jump statements change the normal execution of a loop.
+
+Types:
+1. break
+2. continue
+3. pass
+
+break Statement: The break statement immediately stops the loop.
+
+Example:
+
+for num in range(1, 15):
+
+    if num == 5:
+        break
+
+    print(num)
+
+
+
+continue Statement: The continue statement skips the current iteration.
+
+Example:
+
+for number in range(1, 5):
+
+    if number == 3:
+        continue
+
+    print(number)
+
+
+
+pass Statement: The pass statement does nothing. It is used as a placeholder.
+
+Example:
+
+for num in range(1, 6):
+
+    if num == 3:
+        pass
+
+    print(num)
