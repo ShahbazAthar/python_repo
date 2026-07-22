@@ -307,7 +307,7 @@ is works with any Python objects, even if they have different data types.
 # print(d2)
 
 # print(d1.get('e'))
-------------------------
+-----------------------
 
 a = (1, 2, 'j', [10, 4, 'ab'])
 b = ('a', 'dd', 88)
@@ -326,3 +326,127 @@ print(c * 3)
 print(c * 0)
 print(a == c)
 print(a < c)
+print(a > c)
+print(a > b)
+
+#--------------------------------------------
+# a = (1, 2, 'j', [10, 4, 'ab'])
+# b = ('a', 'dd', 88)
+# c = (3, 0, 1)
+
+# print(a == c)
+# print(a < c)
+# print(a > c)
+# print(a > b)
+
+# 1.
+# print(a == c)
+# Python compares tuples element by element.
+
+# a = (1, 2, 'j', ...)
+# c = (3, 0, 1)
+
+# First element:
+
+# 1 == 3
+# False.
+
+# So the entire comparison is
+# False
+
+# 2.
+# print(a < c)
+
+# Again, tuple comparison is lexicographical (like dictionary order).
+
+# Compare first elements:
+# 1 < 3
+# True.
+
+# Python doesn't check the remaining elements.
+
+# Output:
+# True
+
+# 3.
+# print(a > c)
+
+# First elements:
+
+# 1 > 3
+# False.
+
+# Output:
+# False
+# 4.
+# print(a > b)
+
+# Now compare first elements:
+# 1 > 'a'
+
+# Can Python compare an int with a str?
+# No.
+
+# So Python raises:
+# TypeError:
+# '>' not supported between instances of 'int' and 'str'
+
+# Execution stops here.
+
+# Important Rule (Interview Question)
+
+# Python compares tuples element by element from left to right.
+
+# As soon as it finds the first unequal pair:
+
+# If they can be compared, the result is decided immediately.
+# If they cannot be compared (like int and str with < or >), Python raises a TypeError.
+# Another Example
+# t1 = (1, 5, 100)
+# t2 = (1, 8, 2)
+
+# print(t1 < t2)
+
+# Comparison:
+
+# 1 == 1 ✔
+# 5 < 8 ✔
+
+# Python stops here.
+
+# Output:
+
+# True
+
+# It never even looks at 100 and 2.
+
+# One More Example
+# t1 = (1, "abc")
+# t2 = (1, 5)
+
+# print(t1 > t2)
+
+# Comparison:
+
+# 1 == 1 ✔
+
+# "abc" > 5
+
+# This raises:
+
+# TypeError:
+# '>' not supported between instances of 'str' and 'int'
+
+# because the first unequal elements are of incompatible types.
+
+# Note about ==
+
+# Unlike <, >, <=, and >=, the equality operators do not raise an error for different types. They simply return False if the values (or types) don't match.
+
+# For example:
+
+# print(1 == "1")      # False
+# print((1, 2) == (1, "2"))  # False
+
+# This is why a == c returns False instead of raising an exception.
+#--------------------------------------------------------
