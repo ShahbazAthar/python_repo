@@ -109,10 +109,13 @@ data = {
     "Typical Use": ["Sequence", "Fixed", "Unique", "Const", "Mapping"],
 }
 
-print("Property", "\t", "List", "\t", "Tuple", "\t", "Set", "\t", "Frozenset", "\t", "Dictionary")
+w = 18   # width for the row label column
+c = 12   # width for each data column
+
+print("Property".ljust(w), "List".ljust(c), "Tuple".ljust(c), "Set".ljust(c), "Frozenset".ljust(c), "Dictionary".ljust(c))
 
 for key, value in data.items():
-    print(key, end="\t")
+    print(key.ljust(w), end="")
     for item in value:
-        print(item, end="\t")
+        print(item.ljust(c), end="")
     print()
