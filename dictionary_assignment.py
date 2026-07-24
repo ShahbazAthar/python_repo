@@ -119,3 +119,46 @@ for key, value in data.items():
     for item in value:
         print(item.ljust(c), end="")
     print()
+
+'''
+Q1 — dict.pop() and dict.popitem()
+
+.pop(key, default) removes a specific key you name, and returns its value.
+ If the key doesn't exist, it returns the default you gave instead of crashing (or raises KeyError if no default is given).
+
+.popitem() removes and returns the last inserted key-value pair as a tuple — you don't get to choose which one. 
+popitem() always pops the most recently added item (LIFO — last in, first out).
+
+When to use .pop(): 
+when you know exactly which entry you want removed 
+and want to grab its value while removing it in one step.
+
+
+config = {"name": "server1", "port": 8080, "debug": True}
+debug_mode = config.pop("debug")   # "debug" is gone from config
+
+- scenario: pulling a specific setting out of a dictionary so
+ it doesn't get processed again later, 
+ e.g. separating an ID field before saving the rest of a record.
+
+When to use .popitem(): 
+when you want to drain a dictionary 
+one entry at a time, like a stack, 
+without caring which specific key comes out, just that it's the most recent.
+
+
+stack = {}
+stack["step1"] = "load data"
+stack["step2"] = "clean data"
+stack["step3"] = "train model"
+
+last_step = stack.popitem()   # ('step3', 'train model')
+
+In ML specifically:
+.pop() shows up constantly in data preprocessing — separating the target/label 
+column from a feature dictionary before feeding the rest into a model:
+
+
+sample = {"age": 25, "income": 50000, "target": 1}
+label = sample.pop("target")   # sample now only has features
+'''
