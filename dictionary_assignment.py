@@ -1,95 +1,95 @@
-# # Q1: Enter Name and Percentage Marks in a dictionary and display it
-# def func1():
-#     student = {}
-#     while True:
+# Q1: Enter Name and Percentage Marks in a dictionary and display it
+def func1():
+    student = {}
+    while True:
         
-#         name = input("enter name: ")
+        name = input("enter name: ")
 
-#         if not name:
-#             break
+        if not name:
+            break
 
-#         while True:
-#             try:
-#                 percentage = float(input("enter percentage: "))
-#                 if not (0 <= percentage <= 100):
-#                     print("percentage out of range")
-#                 else:
-#                     break
+        while True:
+            try:
+                percentage = float(input("enter percentage: "))
+                if not (0 <= percentage <= 100):
+                    print("percentage out of range")
+                else:
+                    break
                     
-#             except ValueError:
-#                 print('enter valid percentage')
+            except ValueError:
+                print('enter valid percentage')
 
 
-#         student[name] = percentage
+        student[name] = percentage
 
-#     print(student)
+    print(student)
 
-# func1()
+func1()
 
-# # Q2: Number of occurrences of each letter in a given string
-# def func2():
-#     text = input("enter a string: ")
+# Q2: Number of occurrences of each letter in a given string
+def func2():
+    text = input("enter a string: ")
 
-#     letter_count = {}
-#     for ch in text:
-#         if ch.isalpha():
-#             letter_count[ch] = letter_count.get(ch, 0) + 1
+    letter_count = {}
+    for ch in text:
+        if ch.isalpha():
+            letter_count[ch] = letter_count.get(ch, 0) + 1
 
-#     for letter, count in letter_count.items():
-#         print(letter, ":", count)
+    for letter, count in letter_count.items():
+        print(letter, ":", count)
 
-# func2()
+func2()
 
-# # Q3: Number of occurrences of each vowel in a given string
-# def func3():
-#     text = input("enter a string: ")
+# Q3: Number of occurrences of each vowel in a given string
+def func3():
+    text = input("enter a string: ")
 
-#     vowels = "aeiou"
-#     vowel_count = {}
-#     for v in vowels:
-#         vowel_count[v] = 0
+    vowels = "aeiou"
+    vowel_count = {}
+    for v in vowels:
+        vowel_count[v] = 0
 
-#     for ch in text.lower():
-#         if ch in vowels:
-#             vowel_count[ch] += 1
+    for ch in text.lower():
+        if ch in vowels:
+            vowel_count[ch] += 1
 
-#     for vowel, count in vowel_count.items():
-#         print(vowel, ":", count)
+    for vowel, count in vowel_count.items():
+        print(vowel, ":", count)
 
-# func3()
+func3()
 
-# # Q4: Accept student names & marks, store in dictionary,
-# #    then look up marks by entering a student name
+# Q4: Accept student names & marks, store in dictionary,
+#    then look up marks by entering a student name
 
-# def func4():
-#     student = {}
-#     while True:
+def func4():
+    student = {}
+    while True:
 
-#         name = input("enter name: ")
+        name = input("enter name: ")
 
-#         if not name:
-#             break
+        if not name:
+            break
 
-#         while True:
-#             try:
-#                 marks = float(input("enter marks: "))
-#                 if not (0 <= marks <= 100):
-#                     print("marks out of range")
-#                 else:
-#                     break
+        while True:
+            try:
+                marks = float(input("enter marks: "))
+                if not (0 <= marks <= 100):
+                    print("marks out of range")
+                else:
+                    break
 
-#             except ValueError:
-#                 print('enter valid marks')
+            except ValueError:
+                print('enter valid marks')
 
-#         student[name] = marks
+        student[name] = marks
 
-#     search_name = input("enter student name: ")
-#     if search_name in student:
-#         print("marks of", search_name, ":", student[search_name])
-#     else:
-#         print("no record found for", search_name)
+    search_name = input("enter student name: ")
+    if search_name in student:
+        print("marks of", search_name, ":", student[search_name])
+    else:
+        print("no record found for", search_name)
 
-# func4()
+func4()
 
 # Q5: Tabular comparison of List, Tuple, Set, Frozenset, Dictionary
 
