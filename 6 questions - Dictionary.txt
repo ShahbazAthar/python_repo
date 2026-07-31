@@ -1,0 +1,54 @@
+Question 1: Invert a Dictionary
+Problem:
+Given a dictionary where all values are unique, 
+return a new dictionary where the keys and values are swapped.
+
+Input: {"a": 1, "b": 2, "c": 3}
+Output: {1: "a", 2: "b", 3: "c"}
+
+Question 2: Filter Dictionary by Value
+Problem:
+Given a dictionary of product names and their prices, 
+return a new dictionary containing only the products 
+with a price greater than a given threshold.
+
+Input: products = {"pen": 8, "cup": 35, "bag": 2, "box": 70}
+threshold = 15
+Output: {"cup": 35, "box": 70}
+
+Question 3 (Basic-Medium): Count Vowels and Consonants
+Problem:
+Given a string, return a dictionary with two keys,
+"vowels" and "consonants", showing the count of each in 
+the string. Ignore spaces, digits, and punctuation. 
+Treat the input as lowercase letters only.
+
+Input: "hello world"
+Output: {"vowels": 3, "consonants": 7}
+
+
+Question 4: Find All Keys with Maximum Value
+Problem:
+Given a dictionary of item names and their quantities, 
+return a list of all item names that have the highest quantity.
+If there's a tie, include all of them (sorted alphabetically).
+
+Input: {"marker": 90, "pen": 10, "box": 90,  "sharpener": 5}
+Output: ["box", "marker"]
+
+Question 5: Sum of Values in a Dictionary
+Problem:
+Given a dictionary of expenses (category → amount), 
+return the total sum of all amounts.
+
+Input: {"food": 200, "rent": 1000, "household": 150, "others": 300}
+Output: 1650
+
+Question 6 : Common Keys Between Two Dictionaries
+Problem:
+Given two dictionaries,
+return a sorted list of keys that exist in both dictionaries.
+
+Input: dict1 = {"a": 1, "b": 2, "c": 3}
+       dict2 = {"b": 5, "c": 6, "d": 7}
+Output: ["b", "c"]

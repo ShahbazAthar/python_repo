@@ -1,5 +1,4 @@
 #Repeated number triangle
-
 print('Repeated number triangle')
 n = 5
 for i in range(1, n + 1):

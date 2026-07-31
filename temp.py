@@ -1,11 +1,9 @@
-n = 5
-for i in range(1, n):
-    for j in range(n - i):
-        print(" ", end = "")
+n = int(input('enter the no: '))
+m = int(input('enter how many time the no should be printed: '))
 
-    if i == 1:
-        print("*")
-    else:    
-        print("*" + " " * (2 * i - 3) + "*")
+b = n
+for _ in range(1, m):
+    b = b * 10
+    n = n + b
 
-print("*" * (2 * n - 1))
+print(n)
