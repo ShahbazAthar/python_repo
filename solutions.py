@@ -10,7 +10,7 @@ w = {"a": 1, "b": 2, "c": 3}
 invert(w)
 
 #Question 2: Filter Dictionary by Value
-def filter(dict1, threshold):
+def filter_val(dict1, threshold):
     result = {}
     for key, val in dict1.items():
         if val > threshold:
@@ -20,7 +20,7 @@ def filter(dict1, threshold):
 
 products = {"pen": 8, "cup": 35, "bag": 2, "box": 70}
 threshold = 15
-filter(products, threshold)
+filter_val(products, threshold)
 
 #Question 3: Count Vowels and Consonants
 def count_v_w(s):
