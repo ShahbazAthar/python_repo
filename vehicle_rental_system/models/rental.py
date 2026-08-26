@@ -6,7 +6,7 @@ from exceptions.rental_exceptions import (
     InvalidOperationError,
 )
 
-LATE_FEE_RATE = 0.20        # 20% of daily rate, per late day
+LATE_FEE_RATE = 1.20        # 20% of daily rate, per late day
 CANCELLATION_FEE_RATE = 0.10  # 10% of base amount forfeited on cancellation
 
 
