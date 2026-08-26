@@ -57,14 +57,14 @@ vehicle_rental_system/
 | `Vehicle` (abstract) | Shared fields (id, registration, brand, model, rate, availability) + abstract `calculate_rental_cost()` |
 | `Car` / `Bike` / `Van` | Each implements its own pricing rule |
 | `Customer` | Identity, validation, rental history |
-| `Admin` | Manages inventory and vehicle maintenance status (bonus role) |
+| `Admin` | Manages inventory and vehicle maintenance status  |
 | `PaymentProcessor` (interface) | The one contract: `process_payment(amount)` |
 | `CardPaymentProcessor` / `UpiPaymentProcessor` | Two independent implementations of the contract |
 | `Rental` | Composes a Customer + Vehicle; enforces rental business rules |
 | `Invoice` | Formats and displays the final billing breakdown |
 | `VehicleInventory` | Owns the vehicle list; search and availability |
 | `RentalService` | Orchestrates rent/return/cancel; depends only on `PaymentProcessor`, `VehicleInventory`, and `NotificationService` — never a concrete payment or vehicle class |
-| `NotificationService` | Simulates SMS/email notifications at rental, return, and cancellation (bonus) |
+| `NotificationService` | Simulates SMS/email notifications at rental, return, and cancellation  |
 
 ## OOP concept mapping
 
@@ -85,15 +85,14 @@ vehicle_rental_system/
 whatever `Vehicle` it's handed — it has no idea whether that's a `Car`,
 `Bike`, or `Van`, and it doesn't need to. Each subclass supplies its own
 pricing logic, so the calling code stays completely unaware of vehicle
-types. This is what satisfies the assignment's restriction against
-"long if/else chains based on vehicle type": there's no vehicle-type
+types. This is what satisfies -  no long if/else chains based on vehicle type": there's no vehicle-type
 conditional anywhere in the codebase, because the vehicle itself is
 responsible for knowing its own cost. It's also what makes the system
 open to extension — adding a `Truck(Vehicle)` class with its own pricing
 rule requires touching exactly one file (`models/vehicle.py`); nothing
 in `services/` or `main.py` changes.
 
-## Bonus features implemented
+## Other implemented features
 
 - Security deposit + insurance premium calculation (per-vehicle-type deposit multiplier)
 - Cancellation and refund handling (with a cancellation fee)
@@ -101,17 +100,15 @@ in `services/` or `main.py` changes.
 - Administrator role, separate from Customer (not a subclass — different responsibilities)
 - JSON-based data persistence for vehicles and customers
 - Automated unit tests (25 tests, success and failure paths) and simulated notifications (SMS/email messages printed at rental, return, and cancellation)
-- (Beyond the listed bonus scope) A fully interactive console menu (`interactive_main.py`), reusing every existing class with zero modification — demonstrating the design is genuinely extensible
+- A fully interactive console menu (`interactive_main.py`), reusing every existing class with zero modification — demonstrating the design is genuinely extensible
 
 ## Run instructions
 
 ```bash
 python -m venv venv
-venv\Scripts\activate        # Windows
-source venv/bin/activate     # Mac/Linux
-
+venv\Scripts\activate
 pip install -r requirements.txt
-python main.py               # scripted mandatory demo scenario
+python main.py               # scripted demo scenario
 python interactive_main.py   # interactive console menu
 ```
 
