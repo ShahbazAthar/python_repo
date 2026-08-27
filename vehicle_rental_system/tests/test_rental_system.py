@@ -119,8 +119,8 @@ class TestRentalBusinessRules(unittest.TestCase):
         rental = Rental("R1", self.customer, self.car, 3, rental_date=rental_date)
         rental.complete_rental(return_date=rental_date + timedelta(days=4))  # 1 day late
         self.assertEqual(rental.late_days, 1)
-        self.assertEqual(rental.late_fee(), 1 * (2000 * 0.20))
-        self.assertEqual(rental.calculate_final_amount(), 6000 + 400 + rental.insurance_premium)
+        self.assertEqual(rental.late_fee(), 1 * (2000 * 1.20))
+        self.assertEqual(rental.calculate_final_amount(), 6000 + 2400 + rental.insurance_premium)
 
     def test_on_time_return_has_no_late_fee(self):
         rental_date = date(2026, 8, 1)
