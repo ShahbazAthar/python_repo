@@ -123,3 +123,16 @@ paths, business rules (unavailable vehicle, maintenance block, late
 fees, cancellation), and the payment interface (both a succeeding and
 a failing `PaymentProcessor` implementation, proving `RentalService`
 depends only on the interface).
+
+## Screenshots
+
+### Mandatory demonstration scenario
+![Main scenario](screenshots/01_main_scenario1.png)
+![Main scenario](screenshots/01_main_scenario2.png)
+![Main scenario](screenshots/01_main_scenario3.png)
+
+### Interactive console menu
+![Interactive menu](screenshots/02_interactive_menu.png)
+
+### Automated tests passing
+![Tests passing](screenshots/03_tests_passing.png)
